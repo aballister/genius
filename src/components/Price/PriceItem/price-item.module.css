@@ -1,0 +1,80 @@
+.container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 16px 32px 21px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    text-align: left;
+    position: relative;
+    margin-bottom: 24px;
+    &.containerButton {
+        cursor: pointer;
+    }
+    &.containerOpened {
+        border-radius: 20px 20px 0 0;
+    }
+    .title {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+    .text {
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 300;
+    }
+    .item {
+        width: 100%;
+    }
+    .icon {
+        margin-right: 15px;
+    }
+    .info {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 100%;
+        margin-top: -7px;
+        padding: 20px 32px 10px;
+        border-radius: 0 0 20px 20px;
+        background: #fff;
+        z-index: 1;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #1E1E1E;
+        border-top: 1px solid #E9E4E4;
+        .infoItem {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #E9E4E4;
+            padding-bottom: 4px;
+        }
+        .infoTitle {
+            padding-right: 40px;
+        }
+        .infoPrice {
+            font-weight: 700;
+        }
+    }
+    .button {
+        border: none;
+        font-size: 16px;
+        color: #099582;
+        font-weight: 700;
+        background: none;
+        white-space: nowrap;
+        cursor: pointer;
+        &:hover {
+            font-style: italic;
+            font-weight: 400;
+            text-decoration: underline;
+        }
+        &:active {
+            color: #7A7A7A;
+        }
+    }
+}

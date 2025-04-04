@@ -1,0 +1,135 @@
+.contacts {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    .container {
+        width: 100%;
+        max-width: 1600px;
+        display: flex;
+        position: relative;
+        align-items: stretch;
+        @media screen and (max-width: 1700px) {
+            max-width: 1200px;
+        }
+    }
+    .wrapper {
+        width: 50%;
+        padding-right: 150px;
+        padding-bottom: 70px;
+    }
+    .titleWrapper {
+        position: relative;
+    }
+    .title {
+        color: #099582;
+        font-size: 40px;
+        font-weight: 500;
+        text-align: left;
+        position: relative;
+        margin-bottom: 28px;
+        &:before {
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: #099582;
+            position: absolute;
+            top: -20px;
+            left: 0;
+        }
+    }
+    .city {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    .street {
+        font-size: 16px;
+        line-height: 1.3;
+        font-weight: 300;
+        &+.street {
+            margin-top: 24px;
+        }
+    }
+    .phone {
+        margin-bottom: 8px;
+        font-size: 16px;
+        line-height: 1.3;
+        font-weight: 300;
+        &+.street {
+            margin-top: 24px;
+        }
+    }
+    .addresses {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+        row-gap: 75px;
+        margin-bottom: 58px;
+    }
+    .button {
+        margin-bottom: 70px;
+        height: 48px;
+        width: 295px;
+        border-radius: 20px;
+        color: #fff;
+        background: #099582;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+        border-style: solid;
+        border-color: #099582;
+        border-width: 1px;
+        &:hover {
+            background: #fff;
+            color: #099582;
+        }
+        &:active {
+            background: #D9DFDF;
+        }
+    }
+    .mapWrapper {
+        width: 50%;
+        position: relative;
+        height: 100%;
+    }
+    .map {
+        height: 100%;
+        width: 100%;
+    }
+
+    .goTopWrap {
+        height: 20px;
+        background: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        color: #099582;
+        text-transform: uppercase;
+        border: none;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        transition: all 0.2s;
+        &:hover {
+            font-style: italic;
+            font-size: 16px;
+            &:active {
+                color: #7A7A7A;
+                .listWrapArrowPath {
+                    fill: #7A7A7A;
+                }
+            }
+        }
+    }
+    .goTopWrapArrow {
+        margin-left: 18px;
+    }
+    .goTopWrapArrowRotate {
+        transform: rotate(180deg);
+    }
+    .goTopWrapArrowPath {
+        transition: fill 0.2s;
+    }
+}

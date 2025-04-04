@@ -1,0 +1,48 @@
+.price {
+    width: 100vw;
+    padding-top: 130px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .container {
+        width: 100%;
+        max-width: 1600px;
+        position: relative;
+        @media screen and (max-width: 1700px) {
+            max-width: 1200px;
+        }
+    }
+    .titleWrapper {
+        position: relative;
+    }
+    .title {
+        color: #000;
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        position: relative;
+        &:before {
+            content: '';
+            height: 1px;
+            width: 200px;
+            background: #099582;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            margin-left: -100px;
+        }
+    }
+    .bg {
+        margin-top: 36px;
+        width: 100%;
+        padding: 40px 0 16px;
+        display: flex;
+        justify-content: center;
+        background: rgba(8, 116, 93, 0.30) url("/price-bg.png") no-repeat center left / cover;
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+        }
+    }
+}

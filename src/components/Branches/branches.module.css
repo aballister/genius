@@ -1,0 +1,177 @@
+.branches {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 230px 0 90px;
+    .container {
+        width: 100%;
+        max-width: 1600px;
+        position: relative;
+        @media screen and (max-width: 1700px) {
+            max-width: 1200px;
+        }
+    }
+    .rect {
+        position: absolute;
+        width: 834px;
+        height: 577px;
+        left: 50%;
+        margin-left: 270px;
+        top: -60px;
+        background: linear-gradient(232.43deg, rgba(7, 140, 111, 0.8) -11.6%, rgba(8, 116, 93, 0.4) 80.55%);
+        border-radius: 200px;
+    }
+    .titleWrapper {
+        position: relative;
+    }
+    .branchList {
+        width: calc(100% + 20px);
+        margin: 40px 0 40px -10px;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        row-gap: 20px;
+        padding-top: 10px;
+        .sliderItem {
+            margin: 0;
+            height: auto;
+        }
+    }
+    .title {
+        color: #000;
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        position: relative;
+        &:before {
+            content: '';
+            height: 1px;
+            width: 200px;
+            background: #099582;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            margin-left: -100px;
+        }
+    }
+    .sliderControls {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        width: 118px;
+        padding-right: 6px;
+        justify-content: space-between;
+        .sliderLeft,
+        .sliderRight {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background: #fff;
+            cursor: pointer;
+            border: 1px solid #D9DFDF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            &:hover {
+                background: #099582;
+                .arrowLeft, .arrowRight {
+                    .arrowPath {
+                        stroke: #fff;
+                    }
+                }
+            }
+            &:active {
+                background: #D9DFDF;
+                &:hover {
+                    .arrowLeft, .arrowRight {
+                        .arrowPath {
+                            stroke: #099582;
+                        }
+                    }
+                }
+            }
+            .arrowPath {
+                transition: all 0.2s;
+            }
+        }
+        .arrowRight {
+            transform: rotate(180deg);
+        }
+    }
+    .slider {
+        width: calc(100% + 40px) !important;
+        margin-left: -20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    .sliderItem {
+        margin: 10px;
+        height: calc(100% - 20px);
+        padding: 22px 30px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 0 6px rgba(114, 182, 171, 0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+    .image {
+        margin-bottom: 24px;
+    }
+    .specialsTitle {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #000;
+        margin-bottom: 12px;
+    }
+    .specialsText {
+        font-size: 16px;
+        line-height: 1.3;
+        font-weight: 300;
+        color: #000;
+    }
+    .listWrapWrapper {
+        display: flex;
+        justify-content: center;
+        height: 20px;
+        align-items: center;
+    }
+    .listWrap {
+        background: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        color: #099582;
+        text-transform: uppercase;
+        border: none;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        transition: all 0.2s;
+        &:hover {
+            font-style: italic;
+            font-size: 16px;
+            &:active {
+                color: #7A7A7A;
+                .listWrapArrowPath {
+                    fill: #7A7A7A;
+                }
+            }
+        }
+    }
+    .listWrapArrow {
+        margin-left: 18px;
+    }
+    .listWrapArrowRotate {
+        transform: rotate(180deg);
+    }
+    .listWrapArrowPath {
+        transition: fill 0.2s;
+    }
+}

@@ -1,0 +1,44 @@
+.sliderItem {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .doctorTitle {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 2px;
+    }
+    .doctorPosition {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.3;
+        margin-bottom: 8px;
+    }
+    .doctorMore {
+        background: none;
+        border: none;
+        text-decoration: underline;
+        cursor: pointer;
+        color: #7A7A7A;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .doctorInfo {
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 400;
+        color: #7A7A7A;
+        margin-bottom: 8px;
+        .strong {
+            font-weight: 500;
+        }
+    }
+}
+

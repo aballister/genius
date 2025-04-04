@@ -1,0 +1,66 @@
+.footerContainer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 46px 0 55px;
+    background: #72B6AB url("/footer-bg.png") no-repeat center bottom/cover;
+    .container {
+        width: 100%;
+        max-width: 1600px;
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (max-width: 1700px) {
+            max-width: 1200px;
+        }
+    }
+    .logo {
+        margin-right: 190px;
+    }
+    .menuWrapper {
+        display: flex;
+        margin-bottom: 105px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+    .menuTitle {
+        color: #fff;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .menuLink, .email, .text {
+        margin-top: 16px;
+        color: #fff;
+        font-size: 18px;
+    }
+    .menuLink, .email {
+        text-decoration: none;
+        transition: all 0.2s;
+        height: 25px;
+        &:hover {
+            font-size: 20px;
+            font-weight: 500;
+            &:active {
+                color: #7A7A7A;
+            }
+        }
+    }
+    .email {
+        margin-top: 24px;
+    }
+    .copyrightWrapper {
+        width: 100%;
+        .copyright {
+            width: 385px;
+            border-top: 1px solid #fff;
+            color: #fff;
+            padding-top: 11px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+}
