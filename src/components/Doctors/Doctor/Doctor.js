@@ -1,7 +1,7 @@
 import styles from './doctor.module.css';
 import { useCallback, useState } from 'react';
 
-export default function Doctor() {
+export default function Doctor({item}) {
     const [hideInfo, setHideInfo] = useState(true);
 
     const infoToggle = useCallback(() => {
@@ -12,20 +12,19 @@ export default function Doctor() {
         <div className='keen-slider__slide'>
             <div className={styles.sliderItem}>
                 <img
-                    alt='Kovalenko'
-                    src='/kovalenko.png'
+                    alt={item.name}
+                    src={`/${item.img}`}
                     className={styles.image}
                 />
-                <p className={styles.doctorTitle}>Олена Коваленко</p>
-                <p className={styles.doctorPosition}>кардіолог</p>
-                {
-                    !hideInfo &&
-                    <div className={styles.doctorInfo}>
-                        <p className={styles.doctorExp}><span className={styles.strong}>Досвід роботи:</span> 23 роки</p>
-                        <p className={styles.doctorText}>лікар-кардіолог, лікар функціональної діагностики, лікар першої
-                            категорії, кандидат медичних наук</p>
-                    </div>
-                }
+                <p className={styles.doctorTitle}>{item.name}</p>
+                <p className={styles.doctorPosition}>{item.position}</p>
+                <div className={`${styles.doctorInfo} ${hideInfo && styles.hidden}`}>
+                    {
+                        item.exp &&
+                        <p className={styles.doctorExp}><span className={styles.strong}>Досвід роботи:</span> {item.exp}</p>
+                    }
+                    <p className={styles.doctorText}>{item.info}</p>
+                </div>
                 <button className={styles.doctorMore} onClick={infoToggle}>
                     {
                         !hideInfo ?

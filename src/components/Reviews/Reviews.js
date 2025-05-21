@@ -3,6 +3,9 @@ import styles from './reviews.module.css';
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
 import { useState } from 'react';
+import { setModalAction } from '@/store/slices/uiSlice';
+import { useDispatch } from 'react-redux';
+import SliderControls from '@/components/Reviews/SliderControls';
 
 const reviews = [
     {id: 1, date: '10.09.2024', author: 'Марина, 35 років', text: '«Відвідую клініку вже кілька років і кожного разу переконуюсь у професіоналізмі лікарів. Особливо вдячна кардіологу за індивідуальний підхід та уважність. Всі обстеження провели швидко та якісно. Дякую всім співробітникам!»'},
@@ -14,6 +17,7 @@ const reviews = [
 ]
 
 export default function Reviews() {
+    const dispatch = useDispatch();
     const [loaded, setLoaded] = useState(false);
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
@@ -26,22 +30,10 @@ export default function Reviews() {
         },
         loop: true,
         breakpoints: {
-            '(max-width: 900px)': {
-                slides: {
-                    perView: 3,
-                    spacing: 20,
-                },
-            },
-            '(max-width: 576px)': {
-                slides: {
-                    perView: 2,
-                    spacing: 20,
-                },
-            },
-            '(max-width: 400px)': {
+            '(max-width: 1250px)': {
                 slides: {
                     perView: 1,
-                    spacing: 20,
+                    spacing: 0,
                 },
             },
         },
@@ -57,33 +49,7 @@ export default function Reviews() {
                     {
                         loaded &&
                         instanceRef.current &&
-                        <div className={styles.sliderControls}>
-                            <button
-                                className={styles.sliderLeft}
-                                onClick={(e) =>
-                                    e.stopPropagation() || instanceRef.current?.prev()
-                                }
-                            >
-                                <svg className={styles.arrowLeft} width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path className={styles.arrowPath}
-                                          d="M14.5469 7.18752H1.07815M1.07815 7.18752L7.8125 0.45317M1.07815 7.18752L7.8125 13.9219"
-                                          stroke="#099582"/>
-                                </svg>
-                            </button>
-
-                            <button
-                                className={styles.sliderRight}
-                                onClick={(e) =>
-                                    e.stopPropagation() || instanceRef.current?.next()
-                                }
-                            >
-                                <svg className={styles.arrowRight} width="15" height="15" viewBox="0 0 15 15"                                         fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path className={styles.arrowPath}
-                                          d="M14.5469 7.18752H1.07815M1.07815 7.18752L7.8125 0.45317M1.07815 7.18752L7.8125 13.9219"
-                                          stroke="#099582"/>
-                                </svg>
-                            </button>
-                        </div>
+                        <SliderControls instanceRef={instanceRef}/>
                     }
                 </div>
                 <div
@@ -104,7 +70,14 @@ export default function Reviews() {
                         ))
                     }
                 </div>
-                <button className={styles.button}>ЗАЛИШИТИ ВІДГУК</button>
+                {
+                    loaded &&
+                    instanceRef.current &&
+                    <div className={styles.mobileControls}>
+                        <SliderControls instanceRef={instanceRef}/>
+                    </div>
+                }
+                <button className={styles.button} onClick={() => dispatch(setModalAction('Залишити відгук'))}>ЗАЛИШИТИ ВІДГУК</button>
             </div>
         </div>
     )

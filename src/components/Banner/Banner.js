@@ -1,4 +1,5 @@
 import styles from './banner.module.css';
+import BannerButton from '@/components/Banner/Button';
 
 export default function Banner() {
     return (
@@ -7,8 +8,8 @@ export default function Banner() {
                 <div className={styles.wrapper}>
                     <div className={styles.subtitle}>health clinic</div>
                     <h1 className={styles.title}>GENIUS</h1>
-                    <div className={styles.slogan}>Ваше здоров'я – наш пріоритет</div>
-                    <button className={styles.button}>Записатись на прийом</button>
+                    <div className={styles.slogan}>Ваше здоров&apos;я – наш пріоритет</div>
+                    <BannerButton />
                 </div>
             </div>
         </div>

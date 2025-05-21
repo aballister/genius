@@ -1,7 +1,15 @@
+'use client'
+
 import styles from '@/components/Footer/footer.module.css';
 import Image from 'next/image';
+import { useCallback } from 'react';
 
 export default function Footer() {
+    const goTopHandler = useCallback((e, id) => {
+        e.preventDefault();
+        document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+    },[])
+
     return (
         <div className={styles.footerContainer}>
             <div className={styles.container}>
@@ -16,13 +24,13 @@ export default function Footer() {
                 <div className={styles.menuWrapper}>
                     <div className={styles.menu}>
                         <div className={styles.menuTitle}>Навігація</div>
-                        <a href="#" className={styles.menuLink}>Напрямки</a>
-                        <a href="#" className={styles.menuLink}>Послуги та ціни</a>
-                        <a href="#" className={styles.menuLink}>Спеціалісти</a>
+                        <a onClick={(e) => {goTopHandler(e, 'branches')}} className={styles.menuLink}>Напрямки</a>
+                        <a onClick={(e) => {goTopHandler(e, 'prices')}} className={styles.menuLink}>Послуги та ціни</a>
+                        <a onClick={(e) => {goTopHandler(e, 'doctors')}} className={styles.menuLink}>Спеціалісти</a>
                     </div>
                     <div className={styles.menu}>
                         <div className={styles.menuTitle}>Інформація</div>
-                        <a href="#" className={styles.menuLink}>Прайс</a>
+                        <a onClick={(e) => {goTopHandler(e, 'prices')}} className={styles.menuLink}>Прайс</a>
                         <a href="#" className={styles.menuLink}>Політика конфіденційності</a>
                         <a href="#" className={styles.menuLink}>Оферта</a>
                         <a href="#" className={styles.menuLink}>Ліцензії</a>

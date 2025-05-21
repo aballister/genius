@@ -3,6 +3,7 @@ import styles from './branches.module.css';
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
 import { useCallback, useState } from 'react';
+import SliderControls from '@/components/Branches/SliderControls';
 
 const branches = [
     {icon: 'branch-1', title: 'Сімейна медицина', text: 'Комплексний медичний супровід для всієї родини. Профілактика, діагностика та лікування широкого спектра захворювань.'},
@@ -17,6 +18,7 @@ const branches = [
     {icon: 'branch-10', title: 'Отоларингологія', text: 'Лікування захворювань вуха, горла та носа. Профілактика та сучасні методи терапії.'},
     {icon: 'branch-11', title: 'Ендокринологія', text: 'Діагностика та лікування гормональних порушень. Комплексний підхід до захворювань ендокринної системи.'},
     {icon: 'branch-12', title: 'Сестринські маніпуляції', text: 'Професійні медичні процедури та маніпуляції. Високий рівень обслуговування та турбота про кожного пацієнта.'},
+    {icon: 'branch-13', title: 'Косметологія', text: 'Ботулінотерапія, контурна пластика обличчя, аугментація губ, плазмотерапія, мезотерапія, корекція вікових змін.'},
 ]
 
 export default function Branches() {
@@ -33,22 +35,10 @@ export default function Branches() {
         },
         loop: true,
         breakpoints: {
-            '(max-width: 900px)': {
-                slides: {
-                    perView: 3,
-                    spacing: 20,
-                },
-            },
-            '(max-width: 576px)': {
-                slides: {
-                    perView: 2,
-                    spacing: 20,
-                },
-            },
-            '(max-width: 400px)': {
+            '(max-width: 1250px)': {
                 slides: {
                     perView: 1,
-                    spacing: 20,
+                    spacing: 0,
                 },
             },
         },
@@ -60,10 +50,10 @@ export default function Branches() {
             setLoaded(false);
         }
         setWrapped(state => !state);
-    }, [wrapped]);
+    }, [wrapped, instanceRef]);
 
     return (
-        <div className={styles.branches}>
+        <div className={styles.branches} id='branches'>
             <div className={styles.container}>
                 <div className={styles.rect} />
                 <div className={styles.titleWrapper}>
@@ -72,33 +62,7 @@ export default function Branches() {
                         wrapped &&
                         loaded &&
                         instanceRef.current &&
-                        <div className={styles.sliderControls}>
-                            <button
-                                className={styles.sliderLeft}
-                                onClick={(e) =>
-                                    e.stopPropagation() || instanceRef.current?.prev()
-                                }
-                            >
-                                <svg className={styles.arrowLeft} width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path className={styles.arrowPath}
-                                          d="M14.5469 7.18752H1.07815M1.07815 7.18752L7.8125 0.45317M1.07815 7.18752L7.8125 13.9219"
-                                          stroke="#099582"/>
-                                </svg>
-                            </button>
-
-                            <button
-                                className={styles.sliderRight}
-                                onClick={(e) =>
-                                    e.stopPropagation() || instanceRef.current?.next()
-                                }
-                            >
-                                <svg className={styles.arrowRight} width="15" height="15" viewBox="0 0 15 15"                                         fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path className={styles.arrowPath}
-                                          d="M14.5469 7.18752H1.07815M1.07815 7.18752L7.8125 0.45317M1.07815 7.18752L7.8125 13.9219"
-                                          stroke="#099582"/>
-                                </svg>
-                            </button>
-                        </div>
+                        <SliderControls instanceRef={instanceRef} />
                     }
                 </div>
                 {
@@ -142,6 +106,14 @@ export default function Branches() {
                                 ))
                             }
                         </div>
+                }
+                {
+                    wrapped &&
+                    loaded &&
+                    instanceRef.current &&
+                    <div className={styles.mobileControls}>
+                        <SliderControls instanceRef={instanceRef}/>
+                    </div>
                 }
                 <div className={styles.listWrapWrapper}>
                     <button className={styles.listWrap} onClick={wrapHandler}>

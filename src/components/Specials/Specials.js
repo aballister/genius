@@ -3,6 +3,7 @@ import styles from './specials.module.css';
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
 import { useState } from 'react';
+import SliderControls from '@/components/Specials/SliderControls';
 
 export default function Specials() {
     const [loaded, setLoaded] = useState(false)
@@ -17,22 +18,10 @@ export default function Specials() {
         },
         loop: true,
         breakpoints: {
-            '(max-width: 900px)': {
-                slides: {
-                    perView: 3,
-                    spacing: 20,
-                },
-            },
-            '(max-width: 576px)': {
-                slides: {
-                    perView: 2,
-                    spacing: 20,
-                },
-            },
-            '(max-width: 400px)': {
+            '(max-width: 1250px)': {
                 slides: {
                     perView: 1,
-                    spacing: 20,
+                    spacing: 10,
                 },
             },
         },
@@ -46,33 +35,7 @@ export default function Specials() {
                     {
                         loaded &&
                         instanceRef.current &&
-                            <div className={styles.sliderControls}>
-                                <button
-                                    className={styles.sliderLeft}
-                                    onClick={(e) =>
-                                        e.stopPropagation() || instanceRef.current?.prev()
-                                    }
-                                >
-                                    <svg className={styles.arrowLeft} width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path className={styles.arrowPath}
-                                              d="M14.5469 7.18752H1.07815M1.07815 7.18752L7.8125 0.45317M1.07815 7.18752L7.8125 13.9219"
-                                              stroke="#099582"/>
-                                    </svg>
-                                </button>
-
-                                <button
-                                    className={styles.sliderRight}
-                                    onClick={(e) =>
-                                        e.stopPropagation() || instanceRef.current?.next()
-                                    }
-                                >
-                                    <svg className={styles.arrowRight} width="15" height="15" viewBox="0 0 15 15"                                         fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path className={styles.arrowPath}
-                                              d="M14.5469 7.18752H1.07815M1.07815 7.18752L7.8125 0.45317M1.07815 7.18752L7.8125 13.9219"
-                                              stroke="#099582"/>
-                                    </svg>
-                                </button>
-                            </div>
+                        <SliderControls instanceRef={instanceRef}/>
                     }
                 </div>
                 <div
@@ -93,7 +56,7 @@ export default function Specials() {
                             <p className={styles.specialsTitle}>Повний медичний чекап зі знижкою 20%</p>
                             <p className={styles.specialsText}>Пройдіть комплексне обстеження організму з урахуванням
                                 індивідуальних особливостей. Ми надаємо знижку на чекап-програми для тих, хто дбає про своє
-                                здоров'я та бажає отримати всебічну діагностику.</p>
+                                здоров&apos;я та бажає отримати всебічну діагностику.</p>
                         </div>
                     </div>
                     <div className='keen-slider__slide'>
@@ -108,7 +71,7 @@ export default function Specials() {
                             <div className={styles.specialsDate}>діє до 21.09</div>
                         </div>
                         <p className={styles.specialsTitle}>-30% на ультразвукову діагностику (УЗД)</p>
-                        <p className={styles.specialsText}>Пройдіть УЗД будь-якого органу зі знижкою 30%. Точна та швидка діагностика – це перший крок до збереження вашого здоров'я. Скористайтеся цією пропозицією вже сьогодні!</p>
+                        <p className={styles.specialsText}>Пройдіть УЗД будь-якого органу зі знижкою 30%. Точна та швидка діагностика – це перший крок до збереження вашого здоров&apos;я. Скористайтеся цією пропозицією вже сьогодні!</p>
                     </div>
                     </div>
                     <div className='keen-slider__slide'>
@@ -124,7 +87,7 @@ export default function Specials() {
                             </div>
                             <p className={styles.specialsTitle}>Сімейні акції: 10% знижки для всієї родини</p>
                             <p className={styles.specialsText}>Зробіть профілактичні огляди для всієї родини та
-                                отримайте знижку 10% на всі послуги. Піклуйтеся про здоров'я своїх рідних разом із
+                                отримайте знижку 10% на всі послуги. Піклуйтеся про здоров&apos;я своїх рідних разом із
                                 нами!</p>
                         </div>
                     </div>
@@ -141,11 +104,18 @@ export default function Specials() {
                             </div>
                             <p className={styles.specialsTitle}>Сімейні акції: 10% знижки для всієї родини</p>
                             <p className={styles.specialsText}>Зробіть профілактичні огляди для всієї родини та
-                                отримайте знижку 10% на всі послуги. Піклуйтеся про здоров'я своїх рідних разом із
+                                отримайте знижку 10% на всі послуги. Піклуйтеся про здоров&apos;я своїх рідних разом із
                                 нами!</p>
                         </div>
                     </div>
                 </div>
+                {
+                    loaded &&
+                    instanceRef.current &&
+                    <div className={styles.mobileControls}>
+                        <SliderControls instanceRef={instanceRef}/>
+                    </div>
+                }
             </div>
         </div>
     )

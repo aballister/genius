@@ -3,12 +3,24 @@
     display: flex;
     justify-content: center;
     padding: 230px 0 90px;
+    @media screen and (max-width: 1700px) {
+        padding: 190px 0 70px;
+    }
+    @media screen and (max-width: 1366px), screen and (max-height: 750px) {
+        padding: 150px 0 50px;
+    }
+    @media screen and (max-width: 1250px) {
+        padding: 120px 0 30px;
+    }
     .container {
         width: 100%;
         max-width: 1600px;
         position: relative;
         @media screen and (max-width: 1700px) {
             max-width: 1200px;
+        }
+        @media screen and (max-width: 1250px) {
+            padding: 0 20px;
         }
     }
     .rect {
@@ -20,6 +32,13 @@
         top: -60px;
         background: linear-gradient(232.43deg, rgba(7, 140, 111, 0.8) -11.6%, rgba(8, 116, 93, 0.4) 80.55%);
         border-radius: 200px;
+        @media screen and (max-width: 1700px) {
+            height: 480px;
+            top: -40px;
+        }
+        @media screen and (max-width: 1250px) {
+            display: none;
+        }
     }
     .titleWrapper {
         position: relative;
@@ -33,9 +52,17 @@
         grid-gap: 20px;
         row-gap: 20px;
         padding-top: 10px;
+        @media screen and (max-width: 1250px) {
+            display: block;
+            width: 100%;
+            margin: 20px 0 0;
+        }
         .sliderItem {
             margin: 0;
             height: auto;
+            @media screen and (max-width: 1250px) {
+                margin-top: 10px;
+            }
         }
     }
     .title {
@@ -44,6 +71,12 @@
         font-weight: 300;
         text-align: center;
         position: relative;
+        @media screen and (max-width: 1366px), screen and (max-height: 750px) {
+            font-size: 30px;
+        }
+        @media screen and (max-width: 1250px) {
+            font-size: 24px;
+        }
         &:before {
             content: '';
             height: 1px;
@@ -55,6 +88,21 @@
             margin-left: -100px;
         }
     }
+    .mobileControls {
+        display: none;
+        @media screen and (max-width: 1250px) {
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .sliderControls {
+            position: relative;
+            padding-right: 0;
+            @media screen and (max-width: 1250px) {
+                display: flex;
+            }
+        }
+    }
     .sliderControls {
         position: absolute;
         right: 0;
@@ -63,6 +111,9 @@
         width: 118px;
         padding-right: 6px;
         justify-content: space-between;
+        @media screen and (max-width: 1250px) {
+            display: none;
+        }
         .sliderLeft,
         .sliderRight {
             width: 50px;
@@ -107,6 +158,11 @@
         margin-top: 40px;
         margin-bottom: 40px;
         position: relative;
+        @media screen and (max-width: 1250px) {
+            margin-bottom: 20px;
+            width: calc(100% + 20px) !important;
+            margin-left: -10px;
+        }
     }
     .sliderItem {
         margin: 10px;
@@ -120,9 +176,18 @@
         justify-content: flex-start;
         align-items: center;
         text-align: center;
+        @media screen and (max-width: 1700px) {
+            padding: 16px 20px;
+        }
+        @media screen and (max-width: 1250px) {
+            padding: 16px 10px;
+        }
     }
     .image {
         margin-bottom: 24px;
+        @media screen and (max-width: 1366px), screen and (max-height: 750px) {
+            margin-bottom: 20px;
+        }
     }
     .specialsTitle {
         font-size: 20px;
@@ -130,18 +195,27 @@
         font-weight: 500;
         color: #000;
         margin-bottom: 12px;
+        @media screen and (max-width: 1366px), screen and (max-height: 750px) {
+            font-size: 18px;
+        }
     }
     .specialsText {
         font-size: 16px;
         line-height: 1.3;
         font-weight: 300;
         color: #000;
+        @media screen and (max-width: 1366px), screen and (max-height: 750px) {
+            font-size: 14px;
+        }
     }
     .listWrapWrapper {
         display: flex;
         justify-content: center;
         height: 20px;
         align-items: center;
+        @media screen and (max-width: 1250px) {
+            margin-top: 40px;
+        }
     }
     .listWrap {
         background: #fff;
@@ -154,6 +228,9 @@
         cursor: pointer;
         align-items: center;
         transition: all 0.2s;
+        @media screen and (max-width: 1366px), screen and (max-height: 750px) {
+            font-size: 12px;
+        }
         &:hover {
             font-style: italic;
             font-size: 16px;

@@ -4,12 +4,18 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    @media screen and (max-width: 1366px), screen and (max-height: 750px) {
+        padding-top: 100px;
+    }
     .container {
         width: 100%;
         max-width: 1600px;
         position: relative;
         @media screen and (max-width: 1700px) {
             max-width: 1200px;
+        }
+        @media screen and (max-width: 1250px) {
+            padding: 0 20px;
         }
     }
     .titleWrapper {
@@ -21,6 +27,12 @@
         font-weight: 300;
         text-align: center;
         position: relative;
+        @media screen and (max-width: 1366px), screen and (max-height: 750px) {
+            font-size: 30px;
+        }
+        @media screen and (max-width: 1250px) {
+            font-size: 24px;
+        }
         &:before {
             content: '';
             height: 1px;
@@ -39,10 +51,16 @@
         display: flex;
         justify-content: center;
         background: rgba(8, 116, 93, 0.30) url("/price-bg.png") no-repeat center left / cover;
+        @media screen and (max-width: 1250px) {
+            padding: 20px 0 10px;
+        }
         .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             column-gap: 20px;
+            @media screen and (max-width: 1250px) {
+                display: block;
+            }
         }
     }
 }

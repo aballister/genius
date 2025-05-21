@@ -10,21 +10,28 @@ import Form from '@/components/Form/Form';
 import Reviews from '@/components/Reviews/Reviews';
 import Contacts from '@/components/Contacts/Contacts';
 import Footer from '@/components/Footer/Footer';
+import Modal from '@/components/Modal/Modal';
+import StoreProvider from '@/components/StoreProvider';
+import ModalSuccess from '@/components/ModalSuccess/ModalSuccess';
 
 export default function Home() {
     return (
         <main className={styles.main}>
-            <Header />
-            <Banner />
-            <Trust />
-            <Specials />
-            <Branches />
-            <Price />
-            <Doctors />
-            <Form />
-            <Reviews />
-            <Contacts />
-            <Footer />
+            <StoreProvider>
+                    <Header />
+                    <Banner />
+                    <Trust />
+                    {/*<Specials />*/}
+                    <Branches />
+                    <Price />
+                    <Doctors />
+                    <Form />
+                    {/*<Reviews />*/}
+                    <Contacts />
+                    <Footer />
+                    <Modal />
+                    <ModalSuccess />
+            </StoreProvider>
         </main>
     );
 }

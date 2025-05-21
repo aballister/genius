@@ -1,15 +1,22 @@
 "use client"
 import styles from './contacts.module.css';
-import Map from '@/components/Contacts/Map/Map';
 import { useCallback } from 'react';
+import { setModalAction } from '@/store/slices/uiSlice';
+import { useDispatch } from 'react-redux';
+import dynamic from 'next/dynamic'
+
+const Map = dynamic(() => import('./Map/Map'), {
+    ssr: false,
+})
 
 export default function Contacts() {
+    const dispatch = useDispatch();
     const goTopHandler = useCallback(() => {
         window.scrollTo({top: 0, behavior: 'smooth'});
     },[])
 
     return (
-        <div className={styles.contacts}>
+        <div className={styles.contacts} id='contacts'>
             <div className={styles.container}>
                 <div className={styles.wrapper}>
                     <div className={styles.titleWrapper}>
@@ -39,7 +46,7 @@ export default function Contacts() {
                             </p>
                         </div>
                     </div>
-                    <button className={styles.button}>ЗВ’ЯЖІТЬСЯ ЗІ МНОЮ</button>
+                    <button className={styles.button} onClick={() => dispatch(setModalAction('Зворотній зв’язок'))}>ЗВ’ЯЖІТЬСЯ ЗІ МНОЮ</button>
                     <button className={styles.goTopWrap} onClick={goTopHandler}>
                         нагору
                         <svg className={`${styles.goTopWrapArrow} ${styles.goTopWrapArrowRotate}`} width="8"

@@ -4,25 +4,40 @@ import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
 import { useState } from 'react';
 import Doctor from '@/components/Doctors/Doctor/Doctor';
+import SliderControls from '@/components/Doctors/SliderControls';
 
 const doctors = [
     {
-        title: 'Олена Коваленко', position: 'кардіолог', exp: '23 роки', info: 'лікар-кардіолог, лікар функціональної діагностики, лікар першої категорії, кандидат медичних наук',
+        name: 'Полієнко Петро', position: 'головний лікар, терапевт', exp: '7 років', info: 'лікар-терапевт, лікар-кардіолог',
+        img: 'polienko.jpg'
     },
     {
-        title: 'Олена Коваленко', position: 'кардіолог', exp: '23 роки', info: 'лікар-кардіолог, лікар функціональної діагностики, лікар першої категорії, кандидат медичних наук',
+        name: 'Акулов Дмитро', position: 'сімейний лікар', exp: '', info: 'лікар-терапевт, лікар-гастроентиролог',
+        img: 'akulov.jpg'
     },
     {
-        title: 'Олена Коваленко', position: 'кардіолог', exp: '23 роки', info: 'лікар-кардіолог, лікар функціональної діагностики, лікар першої категорії, кандидат медичних наук',
+        name: 'Михайленко Валентина', position: 'ендокринолог', exp: '', info: 'лікар-терапевт, лікар-ендокринолог',
+        img: 'mykhailenko.jpg'
     },
     {
-        title: 'Олена Коваленко', position: 'кардіолог', exp: '23 роки', info: 'лікар-кардіолог, лікар функціональної діагностики, лікар першої категорії, кандидат медичних наук',
+        name: 'Мазурчак Марина', position: 'сімейний лікар', exp: '', info: '',
+        img: 'mazurchak.jpg'
     },
     {
-        title: 'Олена Коваленко', position: 'кардіолог', exp: '23 роки', info: 'лікар-кардіолог, лікар функціональної діагностики, лікар першої категорії, кандидат медичних наук',
+        name: 'Ферас Ель-Заммар', position: 'ортопед-травматолог', exp: '', info: 'спеціалізується на лікуванні та реабілітації після травм та захворювань опорно-рухового апарату',
+        img: 'feras.jpg'
     },
     {
-        title: 'Олена Коваленко', position: 'кардіолог', exp: '23 роки', info: 'лікар-кардіолог, лікар функціональної діагностики, лікар першої категорії, кандидат медичних наук',
+        name: 'Василишин Ярослав', position: 'отоларинголог', exp: '', info: '',
+        img: 'vasylyshyn.jpg'
+    },
+    {
+        name: 'Марданов Ренат', position: 'акушер-гінеколог', exp: '', info: '',
+        img: 'mardanov.jpg'
+    },
+    {
+        name: 'Білоус Інна', position: 'косметолог', exp: '10 років', info: 'ботулінотерапія, контурна пластика обличчя, аугментація губ, плазмотерапія, мезотерапія, корекція вікових змін',
+        img: 'bilous.jpg'
     },
 ]
 
@@ -39,29 +54,17 @@ export default function Doctors() {
         },
         loop: true,
         breakpoints: {
-            '(max-width: 900px)': {
-                slides: {
-                    perView: 3,
-                    spacing: 20,
-                },
-            },
-            '(max-width: 576px)': {
-                slides: {
-                    perView: 2,
-                    spacing: 20,
-                },
-            },
-            '(max-width: 400px)': {
+            '(max-width: 1250px)': {
                 slides: {
                     perView: 1,
-                    spacing: 20,
+                    spacing: 10,
                 },
             },
         },
     });
 
     return (
-        <div className={styles.doctors}>
+        <div className={styles.doctors} id='doctors'>
             <div className={styles.container}>
                 <div className={styles.titleWrapper}>
                     <h2 className={styles.title}>Наші спеціалісти</h2>
@@ -69,33 +72,7 @@ export default function Doctors() {
                     {
                         loaded &&
                         instanceRef.current &&
-                            <div className={styles.sliderControls}>
-                                <button
-                                    className={styles.sliderLeft}
-                                    onClick={(e) =>
-                                        e.stopPropagation() || instanceRef.current?.prev()
-                                    }
-                                >
-                                    <svg className={styles.arrowLeft} width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path className={styles.arrowPath}
-                                              d="M14.5469 7.18752H1.07815M1.07815 7.18752L7.8125 0.45317M1.07815 7.18752L7.8125 13.9219"
-                                              stroke="#099582"/>
-                                    </svg>
-                                </button>
-
-                                <button
-                                    className={styles.sliderRight}
-                                    onClick={(e) =>
-                                        e.stopPropagation() || instanceRef.current?.next()
-                                    }
-                                >
-                                    <svg className={styles.arrowRight} width="15" height="15" viewBox="0 0 15 15"                                         fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path className={styles.arrowPath}
-                                              d="M14.5469 7.18752H1.07815M1.07815 7.18752L7.8125 0.45317M1.07815 7.18752L7.8125 13.9219"
-                                              stroke="#099582"/>
-                                    </svg>
-                                </button>
-                            </div>
+                        <SliderControls instanceRef={instanceRef}/>
                     }
                 </div>
                 <div
@@ -108,6 +85,13 @@ export default function Doctors() {
                         ))
                     }
                 </div>
+                {
+                    loaded &&
+                    instanceRef.current &&
+                    <div className={styles.mobileControls}>
+                        <SliderControls instanceRef={instanceRef}/>
+                    </div>
+                }
             </div>
         </div>
     )
