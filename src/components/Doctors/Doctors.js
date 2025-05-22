@@ -8,7 +8,7 @@ import SliderControls from '@/components/Doctors/SliderControls';
 
 const doctors = [
     {
-        name: 'Полієнко Петро', position: 'головний лікар, терапевт', exp: '7 років', info: 'лікар-терапевт, лікар-кардіолог',
+        name: 'Полієнко Петро', position: 'головний лікар, кардіолог', exp: '7 років', info: 'лікар-кардіолог',
         img: 'polienko.jpg'
     },
     {
@@ -22,6 +22,14 @@ const doctors = [
     {
         name: 'Мазурчак Марина', position: 'сімейний лікар', exp: '', info: '',
         img: 'mazurchak.jpg'
+    },
+    {
+        name: 'Савицька Аліна', position: 'кардіолог', exp: '', info: 'лікар-кардіолог',
+        img: 'savytska.jpg'
+    },
+    {
+        name: 'Мельник Лідія', position: 'невролог', exp: '', info: 'лікар-невролог',
+        img: 'melnyk.jpg'
     },
     {
         name: 'Ферас Ель-Заммар', position: 'ортопед-травматолог', exp: '', info: 'спеціалізується на лікуванні та реабілітації після травм та захворювань опорно-рухового апарату',
