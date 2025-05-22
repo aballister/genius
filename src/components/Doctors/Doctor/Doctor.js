@@ -25,13 +25,16 @@ export default function Doctor({item}) {
                     }
                     <p className={styles.doctorText}>{item.info}</p>
                 </div>
-                <button className={styles.doctorMore} onClick={infoToggle}>
-                    {
-                        !hideInfo ?
-                            'згорнути' :
-                            'дізнатися більше'
-                    }
-                </button>
+                {
+                    (item.info || item.exp) &&
+                    <button className={styles.doctorMore} onClick={infoToggle}>
+                        {
+                            !hideInfo ?
+                                'згорнути' :
+                                'дізнатися більше'
+                        }
+                    </button>
+                }
             </div>
         </div>
     )

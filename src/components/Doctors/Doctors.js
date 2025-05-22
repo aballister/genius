@@ -20,7 +20,7 @@ const doctors = [
         img: 'mykhailenko.jpg'
     },
     {
-        name: 'Мазурчак Марина', position: 'сімейний лікар', exp: '', info: '',
+        name: 'Мазурчак Марина', position: 'сімейний лікар', exp: '', info: 'лікар-терапевт',
         img: 'mazurchak.jpg'
     },
     {
@@ -46,6 +46,10 @@ const doctors = [
     {
         name: 'Білоус Інна', position: 'косметолог', exp: '10 років', info: 'ботулінотерапія, контурна пластика обличчя, аугментація губ, плазмотерапія, мезотерапія, корекція вікових змін',
         img: 'bilous.jpg'
+    },
+    {
+        name: 'Дубиківська Інна', position: 'медична сестра', exp: '', info: '',
+        img: 'dubykivska.jpg'
     },
 ]
 
