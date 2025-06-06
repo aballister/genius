@@ -39,7 +39,9 @@ export default function PriceItem({item}) {
                     />
                 }
                 <div className={styles.item}>
-                    <div className={styles.title}>{item.title}</div>
+                    <div className={styles.title}>{item.title}
+                        {item.offer && <div className={styles.offer}>{item.offer}</div>}
+                    </div>
                     {
                         item.text &&
                         <div className={styles.text}>{item.text}</div>
@@ -67,7 +69,13 @@ export default function PriceItem({item}) {
                             return (
                                 <div className={styles.infoItem} key={index}>
                                     <div className={styles.infoTitle}>{el.title}</div>
-                                    <div className={styles.infoPrice}>{el.price}</div>
+                                    <div className={`${styles.infoPrice} ${((!el.fixedPrice && item.offerValue) || el.offerPrice) && styles.infoPriceLower}`}>
+                                        <span>{el.price}</span>
+                                        {
+                                            ((!el.fixedPrice && item.offerValue) || el.offerPrice) &&
+                                            <span>{el.offerPrice || Math.floor(el.price * item.offerValue / 10) * 10}</span>
+                                        }
+                                    </div>
                                 </div>
                             )
                         })

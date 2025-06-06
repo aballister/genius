@@ -42,12 +42,21 @@
         font-size: 20px;
         line-height: 1.2;
         font-weight: 500;
+        display: flex;
+        column-gap: 16px;
         @media screen and (max-width: 1366px), screen and (max-height: 750px) {
             font-size: 18px;
         }
         @media screen and (max-width: 1250px) {
             font-size: 16px;
         }
+        @media screen and (max-width: 540px) {
+            display: block;
+        }
+    }
+    .offer {
+        font-weight: 600;
+        color: #F57C00;
     }
     .text {
         font-size: 14px;
@@ -114,6 +123,18 @@
         }
         .infoPrice {
             font-weight: 700;
+        }
+        .infoPriceLower {
+            display: flex;
+            column-gap: 16px;
+            span {
+                &:first-child {
+                    text-decoration: line-through;
+                }
+                &:nth-child(2) {
+                    color: #F57C00;
+                }
+            }
         }
     }
     .button {
