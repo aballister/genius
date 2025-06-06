@@ -7,13 +7,14 @@ import dynamic from 'next/dynamic'
 
 const Map = dynamic(() => import('./Map/Map'), {
     ssr: false,
-})
+});
 
 export default function Contacts() {
     const dispatch = useDispatch();
+
     const goTopHandler = useCallback(() => {
         window.scrollTo({top: 0, behavior: 'smooth'});
-    },[])
+    },[]);
 
     return (
         <div className={styles.contacts} id='contacts'>
@@ -26,14 +27,14 @@ export default function Contacts() {
                         <div className={styles.address}>
                             <div className={styles.city}>Київ</div>
                             <p className={styles.street}>вул. Василя Липківського, 25 (вхід з двору)</p>
-                            <p className={styles.street}>Понеділок-пʼятниця 08:00-20:00 <br/> Субота 10:00-18:00 <br/>
-                                Неділя - вихідний</p>
+                            <p className={styles.street}>Понеділок-пʼятниця - 08:00-20:00 <br/> Субота - 08:00-20:00 <br/>
+                                Неділя - 08:00-20:00</p>
                         </div>
                         <div className={styles.address}>
                             <div className={styles.city}>Київ</div>
                             <p className={styles.street}>м.Київ, вул. Гарматна 38а</p>
-                            <p className={styles.street}>Понеділок-пʼятниця 08:00-20:00 <br/>
-                                Субота 10:00-18:00 <br/>
+                            <p className={styles.street}>Понеділок-пʼятниця - 08:00-20:00 <br/>
+                                Субота - 10:00-18:00 <br/>
                                 Неділя - вихідний</p>
                         </div>
                         <div className={styles.address}>

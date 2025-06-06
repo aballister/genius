@@ -36,9 +36,9 @@ $comment = isset($data["comment"]) ? htmlspecialchars(trim($data["comment"])) : 
 
 $message = "Name: $name\r\nPhone: $phone\r\nComment: $comment";
 
-$to = 'aid@skm.clinic';
+$to = 'info@genius.com.ua';
 $subject = 'Client message from website';
-$headers = "From: no-reply@genius.com.ua/\r\n";
+$headers = "From: info@genius.com.ua\r\n";
 $headers .= "Reply-To: no-reply@genius.com.ua\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 

@@ -52,11 +52,11 @@ export default function Map() {
                             src='images/smartphone.png'
                         />
                         <div>
-                            380634164341
+                            380 (66) 408-81-06
                             <br />
-                            380634164341
+                            380 (63) 408-81-08
                             <br />
-                            380634164341
+                            380 (67) 312-90-62
                         </div>
                     </div>
                 </Popup>
@@ -78,11 +78,11 @@ export default function Map() {
                             src='images/smartphone.png'
                         />
                         <div>
-                            380634164341
+                            380 (66) 408-81-06
                             <br />
-                            380634164341
+                            380 (63) 408-81-08
                             <br />
-                            380634164341
+                            380 (67) 312-90-62
                         </div>
                     </div>
                 </Popup>
