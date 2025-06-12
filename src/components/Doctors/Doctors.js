@@ -20,7 +20,7 @@ const doctors = [
         img: 'mykhailenko.jpg'
     },
     {
-        name: 'Савицька Аліна', position: 'кардіолог', exp: '', info: 'лікар-кардіолог',
+        name: 'Савицька Аліна', position: 'кардіолог, дерматолог', exp: '', info: 'лікар-кардіолог, лікар-дерматолог',
         img: 'savytska.jpg'
     },
     {
