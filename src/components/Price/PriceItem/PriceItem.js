@@ -73,7 +73,7 @@ export default function PriceItem({item}) {
                                         <span>{el.price}</span>
                                         {
                                             ((!el.fixedPrice && item.offerValue) || el.offerPrice) &&
-                                            <span>{el.offerPrice || Math.floor(el.price * item.offerValue / 10) * 10}</span>
+                                            <span>{el.offerPrice || el.price * item.offerValue}</span>
                                         }
                                     </div>
                                 </div>

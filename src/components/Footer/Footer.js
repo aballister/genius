@@ -31,9 +31,9 @@ export default function Footer() {
                     <div className={styles.menu}>
                         <div className={styles.menuTitle}>Інформація</div>
                         <a onClick={(e) => {goTopHandler(e, 'prices')}} className={styles.menuLink}>Прайс</a>
-                        <a href="#" className={styles.menuLink}>Політика конфіденційності</a>
-                        <a href="#" className={styles.menuLink}>Оферта</a>
-                        <a href="#" className={styles.menuLink}>Ліцензії</a>
+                        <a target="_blank" href="/privacy_policy.pdf" className={styles.menuLink}>Політика конфіденційності</a>
+                        <a target="_blank" href="/public_offer.pdf" className={styles.menuLink}>Оферта</a>
+                        <a target="_blank" href="/licence.pdf" className={styles.menuLink}>Ліцензії</a>
                     </div>
                     <div className={styles.menu}>
                         <div className={styles.menuTitle}>Контакти</div>
