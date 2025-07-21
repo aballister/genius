@@ -32,6 +32,10 @@ const doctors = [
         img: 'feras.jpg'
     },
     {
+        name: 'Дідок Людмила', position: 'терапевт, УЗД', exp: '', info: '',
+        img: 'didok.jpg'
+    },
+    {
         name: 'Василишин Ярослав', position: 'отоларинголог', exp: '', info: '',
         img: 'vasylyshyn.jpg'
     },
