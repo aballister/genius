@@ -64,6 +64,7 @@ export default function PriceItem({item}) {
                 item.list &&
                 opened &&
                 <div className={styles.info}>
+                    <div className={styles.infoInner}>
                     {
                         item.list.map((el, index) => {
                             return (
@@ -80,6 +81,7 @@ export default function PriceItem({item}) {
                             )
                         })
                     }
+                    </div>
                 </div>
             }
         </div>

@@ -12,7 +12,7 @@ const doctors = [
         img: 'polienko.jpg'
     },
     {
-        name: 'Акулов Дмитро', position: 'сімейний лікар', exp: '', info: 'лікар-терапевт, лікар-гастроентиролог',
+        name: 'Акулов Дмитро', position: 'сімейний лікар', exp: '', info: 'лікар-терапевт, лікар-гастроентеролог',
         img: 'akulov.jpg'
     },
     {
@@ -32,7 +32,7 @@ const doctors = [
         img: 'feras.jpg'
     },
     {
-        name: 'Дідок Людмила', position: 'терапевт, УЗД', exp: '', info: '',
+        name: 'Дідок Людмила', position: 'терапевт, УЗД молочних залоз', exp: '', info: '',
         img: 'didok.jpg'
     },
     {
