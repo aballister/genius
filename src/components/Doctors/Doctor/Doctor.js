@@ -23,7 +23,9 @@ export default function Doctor({item}) {
                         item.exp &&
                         <p className={styles.doctorExp}><span className={styles.strong}>Досвід роботи:</span> {item.exp}</p>
                     }
-                    <p className={styles.doctorText}>{item.info}</p>
+                    {
+                        item.info.split('\n').map((item, index) => <p key={index} className={styles.doctorText}>{item}</p>)
+                    }
                 </div>
                 {
                     (item.info || item.exp) &&
