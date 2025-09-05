@@ -36,6 +36,10 @@ const doctors = [
         img: 'didok.jpg'
     },
     {
+        name: 'Плис Віталія', position: 'дитячий та дорослий отоларинголог', exp: '', info: '',
+        img: 'plys.jpg'
+    },
+    {
         name: 'Василишин Ярослав', position: 'отоларинголог', exp: '', info: '',
         img: 'vasylyshyn.jpg'
     },
