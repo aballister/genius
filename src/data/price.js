@@ -13,7 +13,7 @@ export const price = [
     },
     {
         icon: 'price-2', title: 'Телемедицина (онлайн)', text: 'Консультація по телефону чи в месенджерах',
-        offer: 'Знижки до 50%!', offerValue: '0.5',
+        offer: '', offerValue: '',
         list: [
             {title: 'Консультація терапевта', price: 350, fixedPrice: true,},
             {title: 'Консультація гастроентеролога', price: 600},
