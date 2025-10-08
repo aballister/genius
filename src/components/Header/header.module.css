@@ -1,3 +1,16 @@
+.banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    z-index: 2;
+    position: absolute;
+    color: white;
+    background: #28A745;
+    font-weight: 500;
+    text-transform: uppercase;
+}
 .header {
     height: 116px;
     width: 100%;
@@ -7,6 +20,7 @@
     position: absolute;
     left: 0;
     top: 0;
+    /*top: 40px;*/
     z-index: 1;
     display: flex;
     justify-content: center;
