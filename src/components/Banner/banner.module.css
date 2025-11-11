@@ -6,10 +6,14 @@
     color: #fff;
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 1366px), screen and (max-height: 750px) {
+        height: calc(100vh - 100px);
+    }
     @media screen and (max-width: 1250px) {
         background-position: 65% bottom;
         background-size: auto 100%;
         background-repeat: no-repeat;
+        height: calc(100vh - 68px);
     }
     .container {
         width: 100%;

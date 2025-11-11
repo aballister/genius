@@ -26,7 +26,7 @@ export default function Header() {
     return (
         <>
             {/*<div className={styles.banner}>*/}
-            {/*    Вакцинуємо від грипу!*/}
+            {/*    Вакцинація «Джісі флю квадривалент» (GC Flu quadrivalent, виробництво Південна Корея)*/}
             {/*</div>*/}
             <div className={styles.header}>
                 <div className={styles.container}>

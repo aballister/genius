@@ -51,14 +51,6 @@ const doctors = [
         name: 'Білоус Інна', position: 'косметолог', exp: '10 років', info: 'ботулінотерапія, контурна пластика обличчя, аугментація губ, плазмотерапія, мезотерапія, корекція вікових змін',
         img: 'bilous.jpg'
     },
-    {
-        name: 'Вітренко Анна', position: 'масажист', exp: '', info: '',
-        img: 'vitrenko.jpg'
-    },
-    {
-        name: 'Дубиківська Інна', position: 'медична сестра', exp: '', info: '',
-        img: 'dubykivska.jpg'
-    },
 ]
 
 export default function Doctors() {

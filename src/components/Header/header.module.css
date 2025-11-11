@@ -4,12 +4,19 @@
     align-items: center;
     justify-content: center;
     height: 40px;
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     color: white;
     background: #28A745;
     font-weight: 500;
     text-transform: uppercase;
+    padding: 0 20px;
+    @media screen and (max-width: 1366px), screen and (max-height: 750px) {
+        position: relative;
+        min-height: 40px;
+        height: auto;
+        padding: 10px 20px;
+    }
 }
 .header {
     height: 116px;
@@ -19,13 +26,15 @@
     border-bottom-right-radius: 80px;
     position: absolute;
     left: 0;
-    top: 0;
     /*top: 40px;*/
+    top: 0;
     z-index: 1;
     display: flex;
     justify-content: center;
     @media screen and (max-width: 1366px), screen and (max-height: 750px) {
         height: 100px;
+        position: relative;
+        top: 0;
     }
     @media screen and (max-width: 1250px) {
         height: 68px;
@@ -190,13 +199,16 @@
             }
         }
         &:hover {
-            .phonesWrapper {
-                .phoneItem {
-                    display: block;
+            @media screen and (min-width: 1367px), screen and (min-height: 751px) {
+                .phonesWrapper {
+                    .phoneItem {
+                        display: block;
+                    }
                 }
-            }
-            .dropdownIcon {
-                transform: rotate(180deg);
+
+                .dropdownIcon {
+                    transform: rotate(180deg);
+                }
             }
         }
         .phoneIcon {
