@@ -16,9 +16,9 @@ export default function Footer() {
                 <Image
                     className={styles.logo}
                     src="/logo-white.svg"
-                    alt="Genius"
-                    width={127}
-                    height={51}
+                    alt="Genius health clinic"
+                    width={110}
+                    height={100}
                     priority
                 />
                 <div className={styles.menuWrapper}>
@@ -43,9 +43,8 @@ export default function Footer() {
                         <a href="mailto:aid@skm.clinic" className={styles.email}>aid@skm.clinic</a>
                     </div>
                     <div className={styles.menu}>
-                        <div className={styles.menuTitle}>Адреси</div>
+                        <div className={styles.menuTitle}>Адреса</div>
                         <p className={styles.text}>м. Київ, вул. Василя Липківського, 25 (вхід з двору)</p>
-                        <p className={styles.text}>м.Київ, вул. Гарматна 38а</p>
                     </div>
                 </div>
                 <div className={styles.copyrightWrapper}>

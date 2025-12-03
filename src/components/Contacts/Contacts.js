@@ -21,7 +21,7 @@ export default function Contacts() {
             <div className={styles.container}>
                 <div className={styles.wrapper}>
                     <div className={styles.titleWrapper}>
-                        <h2 className={styles.title}>Наші клініки</h2>
+                        <h2 className={styles.title}>Наша клініка</h2>
                     </div>
                     <div className={styles.addresses}>
                         <div className={styles.address}>
@@ -29,13 +29,6 @@ export default function Contacts() {
                             <p className={styles.street}>вул. Василя Липківського, 25 (вхід з двору)</p>
                             <p className={styles.street}>Понеділок-пʼятниця - 08:00-20:00 <br/> Субота - 08:00-20:00 <br/>
                                 Неділя - 08:00-20:00</p>
-                        </div>
-                        <div className={styles.address}>
-                            <div className={styles.city}>Київ</div>
-                            <p className={styles.street}>м.Київ, вул. Гарматна 38а</p>
-                            <p className={styles.street}>Понеділок-пʼятниця - 08:00-20:00 <br/>
-                                Субота - 10:00-18:00 <br/>
-                                Неділя - вихідний</p>
                         </div>
                         <div className={styles.address}>
                             <div className={styles.city}>Контакти</div>

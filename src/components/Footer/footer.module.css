@@ -24,6 +24,7 @@
         margin-right: 190px;
         @media screen and (max-width: 1250px) {
             margin-right: 0;
+            height: 70px;
         }
     }
     .menuWrapper {

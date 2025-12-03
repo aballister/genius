@@ -38,9 +38,9 @@ export default function Header() {
                     <Image
                         className={styles.logo}
                         src="/logo.svg"
-                        alt="Genius"
-                        width={127}
-                        height={51}
+                        alt="Genius health clinic"
+                        width={77}
+                        height={70}
                         priority
                     />
                     <div className={styles.headerRight}>
