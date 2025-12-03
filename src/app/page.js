@@ -13,12 +13,14 @@ import Footer from '@/components/Footer/Footer';
 import Modal from '@/components/Modal/Modal';
 import StoreProvider from '@/components/StoreProvider';
 import ModalSuccess from '@/components/ModalSuccess/ModalSuccess';
+import Winter from '@/components/Winter/Winter';
 
 export default function Home() {
     return (
         <main className={styles.main}>
             <StoreProvider>
                     <Header />
+                    <Winter />
                     <Banner />
                     <Trust />
                     {/*<Specials />*/}

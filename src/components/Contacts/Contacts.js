@@ -27,8 +27,7 @@ export default function Contacts() {
                         <div className={styles.address}>
                             <div className={styles.city}>Київ</div>
                             <p className={styles.street}>вул. Василя Липківського, 25 (вхід з двору)</p>
-                            <p className={styles.street}>Понеділок-пʼятниця - 08:00-20:00 <br/> Субота - 08:00-20:00 <br/>
-                                Неділя - 08:00-20:00</p>
+                            <p className={styles.street}>Щодня - 08:00-20:00</p>
                         </div>
                         <div className={styles.address}>
                             <div className={styles.city}>Контакти</div>

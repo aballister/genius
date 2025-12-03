@@ -48,22 +48,44 @@
     }
     .title {
         font-size: 200px;
+        line-height: 235px;
         font-weight: 400;
         margin-left: -10px;
         margin-top: -20px;
         margin-bottom: -25px;
+        position: relative;
         @media screen and (max-width: 1366px), screen and (max-height: 750px) {
             font-size: 150px;
+            line-height: 175px;
             margin-top: -10px;
             margin-bottom: -15px;
         }
         @media screen and (max-width: 1250px) {
             font-size: 80px;
+            line-height: 95px;
             margin-top: -5px;
             margin-bottom: -5px;
         }
     }
+    .image {
+        position: absolute;
+        width: 110px;
+        left: -16px;
+        top: 130px;
+        transform: rotate(24deg);
+        @media screen and (max-width: 1366px), screen and (max-height: 750px) {
+            width: 90px;
+            left: -16px;
+            top: 100px;
+        }
+        @media screen and (max-width: 1250px) {
+            top: 50px;
+            left: -10px;
+            width: 50px;
+        }
+    }
     .slogan {
+        position: relative;
         font-weight: 300;
         font-size: 24px;
         @media screen and (max-width: 1366px), screen and (max-height: 750px) {

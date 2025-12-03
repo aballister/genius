@@ -44,10 +44,6 @@ const doctors = [
         img: 'bilous.jpg'
     },
     {
-        name: 'Василишин Ярослав', position: 'отоларинголог', exp: '', info: '',
-        img: 'vasylyshyn.jpg'
-    },
-    {
         name: 'Марданов Ренат', position: 'акушер-гінеколог', exp: '', info: '',
         img: 'mardanov.jpg'
     },
