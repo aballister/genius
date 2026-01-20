@@ -1,26 +1,25 @@
 .banner {
-    padding-top: 116px;
-    height: 100vh;
+    height: calc(100vh - 100px);
     width: 100vw;
-    background: #72B6AB url("/banner.png") no-repeat right bottom / contain;
     color: #fff;
     display: flex;
     justify-content: center;
-    @media screen and (max-width: 1366px), screen and (max-height: 750px) {
-        height: calc(100vh - 100px);
+    @media screen and (max-width: 1200px) {
+        height: calc(100vw / 1.778)
     }
-    @media screen and (max-width: 1250px) {
-        background-position: 65% bottom;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-        height: calc(100vh - 68px);
+    @media screen and (max-width: 414px) {
+        height: calc(100vw / 0.75);
     }
     .container {
         width: 100%;
-        height: 100%;
         max-width: 1600px;
-        @media screen and (max-width: 1700px) {
+        height: 100%;
+        background: #fff url("/banner.jpg") no-repeat center / cover;
+        @media screen and (max-width: 1600px) {
             max-width: 1200px;
+        }
+        @media screen and (max-width: 414px) {
+            background: #fff url("/banner_mobile.png") no-repeat center / contain;
         }
     }
     .wrapper {
@@ -30,6 +29,7 @@
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
+        background: url("/banner.jpg") no-repeat center / contain;
         @media screen and (max-width: 1250px) {
             align-items: center;
             justify-content: center;
