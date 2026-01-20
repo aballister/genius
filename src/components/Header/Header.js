@@ -25,9 +25,6 @@ export default function Header() {
 
     return (
         <>
-            {/*<div className={styles.banner}>*/}
-            {/*    Вакцинація «Джісі флю квадривалент» (GC Flu quadrivalent, виробництво Південна Корея)*/}
-            {/*</div>*/}
             <div className={styles.header}>
                 <div className={styles.container}>
                     <button className={styles.hamburger} onClick={menuHandler}>
