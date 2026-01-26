@@ -1,25 +1,32 @@
 .banner {
-    height: calc(100vh - 100px);
+    padding-top: 100px;
     width: 100vw;
     color: #fff;
     display: flex;
     justify-content: center;
-    @media screen and (max-width: 1200px) {
-        height: calc(100vw / 1.778)
-    }
-    @media screen and (max-width: 414px) {
-        height: calc(100vw / 0.75);
+    @media screen and (max-width: 1366px), screen and (max-height: 750px) {
+        padding-top: 0;
     }
     .container {
         width: 100%;
         max-width: 1600px;
-        height: 100%;
-        background: #fff url("/banner.jpg") no-repeat center / cover;
         @media screen and (max-width: 1600px) {
             max-width: 1200px;
         }
+    }
+    .web {
         @media screen and (max-width: 414px) {
-            background: #fff url("/banner_mobile.png") no-repeat center / contain;
+            display: none;
+        }
+        width: 100%;
+        height: auto;
+    }
+    .mobile {
+        display: none;
+        width: 100%;
+        height: auto;
+        @media screen and (max-width: 414px) {
+            display: block;
         }
     }
     .wrapper {
